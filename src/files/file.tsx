@@ -1,9 +1,11 @@
-import React from "react";
+import dataFile from "./data.json";
 
-type Props = {};
-
-const file = (props: Props) => {
-  return <div>file</div>;
+// 먼지정보 가져오기
+const getDustsByFile = (sidoName: string) => {
+  const data = dataFile["response"]["body"]["items"];
+  return data.filter((x) => {
+    return x["sidoName"] === sidoName;
+  });
 };
 
-export default file;
+export { getDustsByFile };
