@@ -1,12 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 import Menus from "../components/Menus";
+import Card from "../components/Card";
 
 const FavoritePage = () => {
   return (
     <>
       <Menus />
-      <Container>FavoritePage</Container>
+      <Container>
+        <Card />
+        <div>
+          <br />
+          FavoritePage
+        </div>
+      </Container>
     </>
   );
 };

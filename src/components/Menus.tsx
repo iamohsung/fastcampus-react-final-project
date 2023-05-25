@@ -2,6 +2,26 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const Menus = () => {
+  const sidoNames = [
+    "서울",
+    "부산",
+    "대구",
+    "인천",
+    "광주",
+    "대전",
+    "울산",
+    "경기",
+    "강원",
+    "충북",
+    "충남",
+    "전북",
+    "전남",
+    "경북",
+    "경남",
+    "제주",
+    "세종",
+  ];
+
   const [selectedSidoName, setSelectedSidoName] = useState("서울");
   const [selectedStationName, setSelectedStationName] = useState("강서구");
 
@@ -19,7 +39,13 @@ const Menus = () => {
           value={selectedSidoName}
           onChange={(e) => sidoChangeHandler(e.target.value)}
         >
-          {}
+          {sidoNames.map((sido) => {
+            return (
+              <option key={sido} value={sido}>
+                {sido}
+              </option>
+            );
+          })}
         </select>
       </div>
       <div>

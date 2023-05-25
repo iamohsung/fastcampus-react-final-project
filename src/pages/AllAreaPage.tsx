@@ -1,12 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 import Menus from "../components/Menus";
+import Card from "../components/Card";
 
 const AllAreaPage = () => {
   return (
     <>
       <Menus />
-      <Container>AllAreaPage</Container>
+      <Container>
+        <Card />
+        <div>
+          <br />
+          AllAreaPage
+        </div>
+      </Container>
     </>
   );
 };
